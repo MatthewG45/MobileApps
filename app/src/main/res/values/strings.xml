@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">Assignment1</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="title">
+        Mortgage Calculator
+    </string>
+    <string name="calculate">
+        Calculate
+    </string>
+    <string name="description" >
+        This is a comprehensive Mortgage calculation App. Please enter your details below to calculate your mortgage payments:
+    </string>
+    <string name="principal">
+        Mortgage Principal Amount
+    </string>
+    <string name="interest">
+        Interest Rate
+    </string>
+    <string name="amortization">
+        Amortization Period (Years)
+    </string>
+    <string name="payment_frequency">
+        Payment Frequency
+    </string>
+    <string name="principal_hint">
+        Enter amount
+    </string>
+    <string name="interest_hint">
+        Enter Interest rate
+    </string>
+    <string name="hint_interest">
+        Assuming a fixed interest rate over the entire amortization period
+    </string>
+    <string name="amortization_hint">
+        Enter Amortization period
+    </string>
+    <string name="payment_frequency_constant">
+        Monthly
+    </string>
+    <string name="payment">
+        Your Monthly Mortgage Payment is
+    </string>
+    <string-array name="dropdownmenu">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+    </string-array>
+</resources>

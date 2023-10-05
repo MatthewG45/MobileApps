@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textview_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/title"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@id/textview_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textview_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="top|start"
+            android:text="@string/description"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@id/layout_descriptions"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textview_title" />
+
+        <LinearLayout
+            android:id="@+id/layout_descriptions"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="0.5"
+
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@id/Barrier"
+            app:layout_constraintEnd_toStartOf="@id/layout_inputs"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textview_description">
+
+            <TextView
+                android:id="@+id/textview_principal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="16dp"
+
+                android:layout_marginEnd="5dp"
+                android:text="@string/principal"
+                android:textSize="15sp"
+
+                app:layout_constraintBottom_toTopOf="@id/layout_interest"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/layout_interest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="5dp"
+
+                android:orientation="horizontal"
+
+                app:layout_constraintBottom_toTopOf="@id/textview_amortization"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textview_principal">
+
+                <TextView
+                    android:id="@+id/textview_interest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="0dp"
+
+                    android:layout_marginEnd="5dp"
+                    android:gravity="top|end"
+                    android:text="@string/interest"
+                    android:textSize="15sp"
+
+                    app:layout_constraintBottom_toTopOf="@id/textview_amortization"
+                    app:layout_constraintEnd_toStartOf="@id/hint_button_interest"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textview_principal" />
+
+                <ImageButton
+                    android:id="@+id/hint_button_interest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+
+                    android:background="@drawable/circle"
+                    android:src="@drawable/info_button"
+
+                    app:layout_constraintBottom_toTopOf="@id/textview_amortization"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/textview_interest"
+                    app:layout_constraintTop_toBottomOf="@id/textview_principal" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textview_amortization"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="16dp"
+
+                android:layout_marginEnd="5dp"
+                android:gravity="top|end"
+                android:text="@string/amortization"
+                android:textSize="15sp"
+
+                app:layout_constraintBottom_toTopOf="@id/textview_payment_frequency"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textview_interest" />
+
+            <TextView
+                android:id="@+id/textview_payment_frequency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="16dp"
+
+                android:layout_marginEnd="5dp"
+                android:gravity="top|end"
+                android:text="@string/payment_frequency"
+                android:textSize="15sp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textview_amortization" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_inputs"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="0.5"
+
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@id/Barrier"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/layout_descriptions"
+            app:layout_constraintTop_toBottomOf="@id/textview_description">
+
+            <EditText
+                android:id="@+id/edittext_principal_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="5dp"
+
+                android:layout_marginTop="16dp"
+                android:background="@null"
+                android:hint="@string/principal_hint"
+                android:inputType="numberDecimal"
+                android:textSize="15sp"
+
+                app:layout_constraintBottom_toTopOf="@id/edittext_interest_input"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/edittext_interest_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="5dp"
+
+                android:layout_marginTop="19dp"
+                android:background="@null"
+                android:hint="@string/interest_hint"
+                android:inputType="numberDecimal"
+                android:textSize="15sp"
+
+
+                app:layout_constraintBottom_toTopOf="@id/spinner_amortization"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edittext_principal_input" />
+
+            <!--
+            This is the declaration of the spinner view
+            It is very similar to other views I've used, but one different is that I
+            had to declare its mode to "dropdown"
+            -->
+            <Spinner
+                android:id="@+id/spinner_amortization"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="5dp"
+
+                android:layout_marginTop="12dp"
+                android:spinnerMode="dropdown"
+
+                app:layout_constraintBottom_toTopOf="@id/edittext_payment_frequency_input"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edittext_interest_input" />
+
+
+            <!--<EditText
+                android:id="@+id/edittext_amortization_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="5dp"
+
+                android:hint="@string/amortization_hint"
+                android:textSize="15sp"
+                android:layout_gravity="start"
+                android:background="@null"
+                android:inputType="numberDecimal"
+
+
+                app:layout_constraintTop_toBottomOf="@id/edittext_interest_input"
+                app:layout_constraintBottom_toTopOf="@id/edittext_payment_frequency_input"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />-->
+
+            <EditText
+                android:id="@+id/edittext_payment_frequency_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="5dp"
+
+                android:layout_marginTop="16dp"
+                android:background="@null"
+                android:editable="false"
+                android:inputType="none"
+                android:text="@string/payment_frequency_constant"
+                android:textSize="15sp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/spinner_amortization" />
+
+        </LinearLayout>
+
+        <android.support.constraint.Barrier
+            android:id="@+id/Barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="layout_descriptions,layout_inputs"
+
+            app:layout_constraintBottom_toTopOf="@id/button_calculate"
+
+            />
+
+        <Button
+            android:id="@+id/button_calculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/calculate"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Barrier" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
