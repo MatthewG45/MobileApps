@@ -102,6 +102,7 @@
                 I had to put it in its own Linear Layout along with the Interest textview
                 since the linear layout they were already in is set to be vertical rather than horizontal
                 -->
+
                 <ImageButton
                     android:id="@+id/hint_button_interest"
                     android:layout_width="wrap_content"
